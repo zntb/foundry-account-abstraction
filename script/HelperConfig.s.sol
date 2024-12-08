@@ -3,6 +3,7 @@ pragma solidity ^0.8.24;
 
 import {Script, console2} from "forge-std/Script.sol";
 import {EntryPoint} from "lib/account-abstraction/contracts/core/EntryPoint.sol";
+import {ERC20Mock} from "@openzeppelin/contracts/mocks/token/ERC20Mock.sol";
 
 contract HelperConfig is Script {
     /*//////////////////////////////////////////////////////////////
@@ -62,6 +63,11 @@ contract HelperConfig is Script {
         }
 
         // deploy mock entry point contract...
-        return NetworkConfig({entryPoint: address(0), account: FOUNDRY_DEFAULT_WALLET});
+        vm.startBroadcast(FOUNDRY_DEFAULT_WALLET);
+        console2.log("Deploying mock entry point contract...");
+        EntryPoint entryPoint = new EntryPoint();
+        vm.stopBroadcast();
+
+        return NetworkConfig({entryPoint: address(entryPoint), account: FOUNDRY_DEFAULT_WALLET});
     }
 }
