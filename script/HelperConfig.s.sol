@@ -24,6 +24,7 @@ contract HelperConfig is Script {
     uint256 constant LOCAL_CHAIN_ID = 31337;
     address constant BURNER_WALLET = 0x2a55160EC26125006b4F38D4f408ae342F1d2966;
     address constant ANVIL_DEFAULT_ACCOUNT = 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266;
+    address constant FOUNDRY_DEFAULT_WALLET = 0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38;
 
     NetworkConfig public localNetworkConfig;
     mapping(uint256 chainId => NetworkConfig) public networkConfigs;
@@ -61,5 +62,6 @@ contract HelperConfig is Script {
         }
 
         // deploy mock entry point contract...
+        return NetworkConfig({entryPoint: address(0), account: FOUNDRY_DEFAULT_WALLET});
     }
 }
