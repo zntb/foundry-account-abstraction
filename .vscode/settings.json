@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["chainid", "Prefund", "randomuser", "userops", "ZKSYNC"]
+  "cSpell.words": [
+    "chainid",
+    "IERC",
+    "Prefund",
+    "randomuser",
+    "userops",
+    "ZKSYNC"
+  ]
 }
