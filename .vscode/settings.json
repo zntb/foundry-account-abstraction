@@ -1,7 +1,10 @@
 {
   "cSpell.words": [
     "chainid",
+    "gasleft",
     "IERC",
+    "mload",
+    "nonceholder",
     "Prefund",
     "randomuser",
     "userops",
