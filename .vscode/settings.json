@@ -6,7 +6,9 @@
     "mload",
     "nonceholder",
     "Prefund",
+    "Pubdata",
     "randomuser",
+    "remappings",
     "userops",
     "ZKSYNC"
   ]
